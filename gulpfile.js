@@ -11,6 +11,9 @@ const dist = "./dist";
 gulp.src("./src/server.php")
   .pipe(gulp.dest(dist));
 
+gulp.src("./db.json")
+  .pipe(gulp.dest(dist));
+
 gulp.task("copy-html", () => {
     return gulp.src("./src/index.html")
                 .pipe(gulp.dest(dist))
